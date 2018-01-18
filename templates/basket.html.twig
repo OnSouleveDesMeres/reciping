@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+    <div id="blank_div">
+        <h1>Votre panier</h1>
+    </div>
+
+    <div class="container">
+
+        {% for item in user_list %}
+
+            <div class="col-sm-12 col-md-6 recap">
+                <h3 id="{{ item.id }}">{{ item.ingredient.name }} {{ item.quantity }} grammes <img alt="delete" class="delete_image" src="images/delete.png"/></h3>
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+
+    <script src="js/delete.js"></script>
+
+{% endblock %}

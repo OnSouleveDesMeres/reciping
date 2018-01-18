@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Login{% endblock %}
+{% block body %}
+
+    <div id="blank_div">
+        <h1>{{ body }}</h1>
+    </div>
+    <form method="post" action="/login" class="row">
+        <div class="col-sm-12 col-md-6 offset-md-3">
+            <label for="username">Pseudo</label>
+            <input class="form-control"  name="pseudo" type="text" placeholder="Pseudo" aria-label="Pseudo" pattern="[A-z].+" required>
+        </div>
+        <div class="col-sm-12 col-md-6 offset-md-3">
+            <label for="username">Mot de passe</label>
+            <input class="form-control mr-sm-2" name="password" type="password" placeholder="password" aria-label="Password" pattern="[A-z].+" required>
+        </div>
+        <!--<div class="g-recaptcha" data-sitekey="6LcqJj0UAAAAAFi2RDP53uVLjw54_9FsfOqGbpTA"></div>-->
+        {% if loginState != "" %}
+            <div class="alert alert-danger text-center col-sm-6 offset-sm-3"><span>{{ loginState }}</span></div>
+        {% endif %}
+        <button class="btn btn-info col-lg-4 offset-lg-4 col-md-6 offset-md-3" type="submit">Connexion</button>
+    </form>
+
+{% endblock %}

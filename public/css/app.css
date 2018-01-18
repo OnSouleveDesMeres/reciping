@@ -1,7 +1,8 @@
-.search{
+#blank_div{
     padding-top: 150px;
     background-color: #d2d2d2;
     padding-bottom: 30px;
+    text-align: center;
 }
 
 .search > container > h1{
@@ -23,4 +24,14 @@ input{
 .card-text{
     margin-top: 15px;
     margin-bottom: 15px;
+}
+
+.delete_image{
+    width: 30px;
+    height: 30px;
+}
+
+.recap{
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
