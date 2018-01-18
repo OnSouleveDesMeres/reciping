@@ -1,7 +1,7 @@
 $("#searchBar").on("input propertychange keyup", function () {
     var input_value = $("#searchBar").val();
 
-    if(input_value != ""){
+    if(input_value != "" && input_value != null){
         $.ajax({
             cache: false,
             type: "POST",
@@ -18,9 +18,9 @@ $("#searchBar").on("input propertychange keyup", function () {
                             success: function(result){
                                 $("#result_search").html(result);
                                 $("#result_search").show();
-                                $('.btn-primary').click(function () {
+                                $('#add_to_basket').click(function () {
                                     var number_ingredients = $('#number_items').text();
-                                    $(this).parent().find('li').each(function () {
+                                    $(this).parent().parent().find('li').each(function () {
                                         $.ajax({
                                             cache: false,
                                             type: "POST",

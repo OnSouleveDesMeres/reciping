@@ -11,3 +11,16 @@
 input{
     font-size: 30px;
 }
+
+#result_search{
+    margin-top: 20px;
+}
+
+.card-header{
+    text-align: center;
+}
+
+.card-text{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
