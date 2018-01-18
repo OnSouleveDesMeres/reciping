@@ -1,0 +1,24 @@
+<div class="card-header">
+    <h2>{{ result.name }}</h2>
+</div>
+<div class="card-block">
+    <div class="col-sm-12">
+        <p class="card-text">
+            {{ result.description }}
+        </p>
+        <p class="card-text">
+        <ul>
+            {% for item in ingredients_list %}
+            <li>
+                <span class="quantity">{{ item.quantity }}</span>
+                grammes de
+                <span class="ingredient" id="{{ item.ingredient.id }}">{{ item.ingredient.name }}</span>
+            </li>
+            {% endfor %}
+        </ul>
+        </p>
+    </div>
+    <a class="btn btn-primary pull-right">
+        Ajouter les ingrédients
+    </a>
+</div>

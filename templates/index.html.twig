@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="search text-center">
+        <div class="container">
+            <h1>Recherchez votre plat</h1>
+            <input type="text" id="searchBar" list="searchlist" class="col-sm-12" placeholder="Recherchez un plat">
+            <datalist id="searchlist">
+            </datalist>
+        </div>
+    </div>
+    <div class="container" id="result_search">
+
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+
+    <script src="js/search.js"></script>
+
+{% endblock %}
